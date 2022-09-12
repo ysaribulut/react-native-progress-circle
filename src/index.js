@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { StyleSheet, View, ViewPropTypes,I18nManager } from 'react-native'
+import { StyleSheet, View, I18nManager } from 'react-native'
 
-// compatability for react-native versions < 0.44
-const ViewPropTypesStyle = ViewPropTypes
-  ? ViewPropTypes.style
-  : View.propTypes.style
+const ViewPropTypesStyle = View.propTypes.style;
 let direction = I18nManager.isRTL? 'right' : 'left';
 let opDirection = I18nManager.isRTL? 'Left' : 'Right';
 const styles = StyleSheet.create({
